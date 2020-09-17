@@ -263,7 +263,7 @@
             </table>
 
             <div class="container">
-            <a class="btn btn-primary" href="../form/index.php" role="button">Coba Lagi</a>
+            <a class="btn btn-primary" href="../form/index.html" role="button">Coba Lagi</a>
             </div>
           </div>
 
