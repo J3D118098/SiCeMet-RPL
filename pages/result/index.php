@@ -97,30 +97,119 @@
 
             foreach($valueform as $key => $value) {
               switch ($value) {
-                case "dapatdijelaskan":
+                case "dapatdijelaskan": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['V-Shaped Model']++;
                     $skormetodologi['Spiral']++;
                     $skormetodologi['Rapid Application Development']++;
-                case "belumjelas":
+                break;
+                  }
+                case "belumjelas":{
                     $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
                     $skormetodologi['Extreme Programming']++;
-                case "sederhana":
+                break;
+                  }
+                
+                case "sederhana":{
                     $skormetodologi['V-Shaped Model']++;
                     $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
-                case "kompleks":
+                break;
+                  }
+                case "kompleks": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+                    $skormetodologi['Spiral']++;
+                break;
+                  }
+                case "sgtkompleks": {
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+
+                break;
+                  }
+                case "1bulan": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "1sd3bulan": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "4sd6bulan": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+ 
+                break;
+                  }
+                case "6sd12bulan": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+                break;
+                  }
+                case "kurangdari12": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['Rapid Application Development']++;
                     $skormetodologi['Scrum']++;
                     $skormetodologi['Extreme Programming']++;
 
-                case "sgtkompleks":
+                break;
+                  }
+                case "lebihdari12": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+ 
+                break;
+                  }
+                case "berpengalaman": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+                break;
+                  }
+                case "campuran": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+                break;
+                  }
+                case "tdkberpengalaman": {
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "ya": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['Spiral']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
-                 }    
+                    $skormetodologi['Extreme Programming']++;
+                break;
+                  }
+                case "tidak": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                break;
+                  }
+                }    
             }
 
             arsort($skormetodologi);
