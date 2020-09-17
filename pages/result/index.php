@@ -94,6 +94,15 @@
               "Scrum" => 0,
               "Extreme Programming" => 0
             );
+            $pages = array(
+              "Incremental" => "incremental",
+              "V-Shaped Model" => "vshaped",
+              "Spiral" => "spiral",
+              "Rapid Application Development" => "rad",
+              "Prototyping" => "prototyping",
+              "Scrum" => "scrum",
+              "Extreme Programming" => "xp"
+            );
 
             foreach($valueform as $key => $value) {
               switch ($value) {
@@ -239,7 +248,7 @@
                   echo '
                   <tr>
                     <td>'.key($skormetodologi).'</td>
-                    <td><a href="../'.key($skormetodologi).'/index.html">Detail</a></td>
+                    <td><a href="../'.$pages[key($skormetodologi)].'/index.html">Detail</a></td>
                     <td>'.($skormetodologi[key($skormetodologi)]).'/6</td>
                   </tr>';
 
