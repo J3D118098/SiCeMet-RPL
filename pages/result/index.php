@@ -94,33 +94,131 @@
               "Scrum" => 0,
               "Extreme Programming" => 0
             );
+            $pages = array(
+              "Incremental" => "incremental",
+              "V-Shaped Model" => "vshaped",
+              "Spiral" => "spiral",
+              "Rapid Application Development" => "rad",
+              "Prototyping" => "prototyping",
+              "Scrum" => "scrum",
+              "Extreme Programming" => "xp"
+            );
 
             foreach($valueform as $key => $value) {
               switch ($value) {
-                case "dapatdijelaskan":
+                case "dapatdijelaskan": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['V-Shaped Model']++;
                     $skormetodologi['Spiral']++;
                     $skormetodologi['Rapid Application Development']++;
-                case "belumjelas":
+                break;
+                  }
+                case "belumjelas":{
                     $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
                     $skormetodologi['Extreme Programming']++;
-                case "sederhana":
+                break;
+                  }
+                
+                case "sederhana":{
                     $skormetodologi['V-Shaped Model']++;
                     $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
-                case "kompleks":
+                break;
+                  }
+                case "kompleks": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+                    $skormetodologi['Spiral']++;
+                break;
+                  }
+                case "sgtkompleks": {
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+
+                break;
+                  }
+                case "1bulan": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "1sd3bulan": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "4sd6bulan": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+ 
+                break;
+                  }
+                case "6sd12bulan": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Scrum']++;
+                break;
+                  }
+                case "kurangdari12": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['Rapid Application Development']++;
                     $skormetodologi['Scrum']++;
                     $skormetodologi['Extreme Programming']++;
 
-                case "sgtkompleks":
+                break;
+                  }
+                case "lebihdari12": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+ 
+                break;
+                  }
+                case "berpengalaman": {
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Spiral']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+                break;
+                  }
+                case "campuran": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
+                    $skormetodologi['Scrum']++;
+                    $skormetodologi['Extreme Programming']++;
+                break;
+                  }
+                case "tdkberpengalaman": {
+                    $skormetodologi['Prototyping']++;
+                break;
+                  }
+                case "ya": {
                     $skormetodologi['Incremental']++;
                     $skormetodologi['Spiral']++;
+                    $skormetodologi['Rapid Application Development']++;
+                    $skormetodologi['Prototyping']++;
                     $skormetodologi['Scrum']++;
-                 }    
+                    $skormetodologi['Extreme Programming']++;
+                break;
+                  }
+                case "tidak": {
+                    $skormetodologi['Incremental']++;
+                    $skormetodologi['V-Shaped Model']++;
+                break;
+                  }
+                }    
             }
 
             arsort($skormetodologi);
@@ -150,7 +248,7 @@
                   echo '
                   <tr>
                     <td>'.key($skormetodologi).'</td>
-                    <td><a href="../'.key($skormetodologi).'/index.html">Detail</a></td>
+                    <td><a href="../'.$pages[key($skormetodologi)].'/index.html">Detail</a></td>
                     <td>'.($skormetodologi[key($skormetodologi)]).'/6</td>
                   </tr>';
 
@@ -174,7 +272,7 @@
             </table>
 
             <div class="container">
-            <a class="btn btn-primary" href="../form/index.php" role="button">Coba Lagi</a>
+            <a class="btn btn-primary" href="../form/index.html" role="button">Coba Lagi</a>
             </div>
           </div>
 
