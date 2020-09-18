@@ -45,7 +45,7 @@
 		          <a class="dropdown-item" href="../scrum/index.html">Scrum</a>
 		          <a class="dropdown-item" href="../xp/index.html">Extreem Programming</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Back to Home</a>
+		          <a class="dropdown-item" href="../../index.html">Back to Home</a>
 		        </div>
 		      </li>
 		      
