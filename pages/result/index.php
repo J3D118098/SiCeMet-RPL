@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		  <div class="container">
-		  <a class="navbar-brand" href="#"><img src="../../assets/img/logo-nav.png" width="210px"></a>
+		  <a class="navbar-brand" href="../../index.html"><img src="../../assets/img/logo-nav.png" width="210px"></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -54,7 +54,7 @@
 		</nav>
 
         <h1>
-          <div class="jumbotron jumbotron-fluid">
+          <div class="jumbotron jumbotron-fluid text-white" style="background-color: #2ec4b6;">
             <div class="container text-center">
               <h1 class="display-4">Rekomendasi <em>SiCeMet</em></h1>
               <p class="lead">Berikut kami sajikan Daftar Metodologi Pengembangan Sistem yang cocok banget buat kamu!</p>
@@ -223,6 +223,7 @@
 
             arsort($skormetodologi);
 
+
             ?>
           </div>
           
@@ -249,11 +250,10 @@
                   <tr>
                     <td>'.key($skormetodologi).'</td>
                     <td><a href="../'.$pages[key($skormetodologi)].'/index.html">Detail</a></td>
-                    <td>'.($skormetodologi[key($skormetodologi)]).'/6</td>
+                    <td>'.floor((($skormetodologi[key($skormetodologi)])/6)*100).'%</td>
                   </tr>';
 
-                  //masih salah dipertambahannya
-
+          
                   next($skormetodologi);
                 }
 
