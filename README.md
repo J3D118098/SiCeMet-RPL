@@ -3,9 +3,8 @@
 Bismillah
 
 
-===========================
 	TUGAS RPL (INF304 - Rekayasa Perangkat Lunak)
-===========================
+
 Jobdesk Team :
 Esto Triramdani N 		: Landing page, header footer (template)
 Naufal Alif Falah		: Page Metodelogi Scrum dan incremental
